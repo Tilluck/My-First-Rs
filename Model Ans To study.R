@@ -1,5 +1,6 @@
 best <- function(state, outcome) {
-    ## Read outcome data
+    ## Read outcome data, eval(outcome) will output the string, 
+    ## %in% compares if variable is in list
     data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
     fd   <- as.data.frame(cbind(data[, 2],   # hospital
                                 data[, 7],   # state
